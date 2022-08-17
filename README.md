@@ -12,56 +12,57 @@
 
 ## Чтобы запустить проект на своем компьютере, нужно выполнить 3 следующие инструкции ##
 
-### 1. Нужно создать подключение к БД
-
-##### **1.1.** Windows -> Панель управления -> Администрирование -> Источники данных (ODBC):
-![Источники данных (ODBC)](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db_1.PNG)
-
-##### 1.2. В окне "Создание нового источника данных" выбрать "ODBC Driver 17 for SQL Server":
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db2.PNG)
-
-##### 1.3. В окне "Создание источника данных для SQL Server" заполнить имя для источника данных и выбрать нужный сервер:
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db3.PNG)
-
-##### 1.4. Далее выбрать пункт "проверка подлинности учетной записи SQL Server" и ввести имя пользователя и пароль:
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db4.PNG)
-
-##### 1.5. Проставить галочку "Использовать по умолчанию базу данных" и выбрать базу данных, к которой нужно подключаться:
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db5.PNG)
-
-##### 1.6. На следующем этапе ничего не меняем, нажимаем на кнопку "Готово":
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db6.PNG)
-
-##### 1.7. В окне "Установка ODBC для Microsoft SQL Server" нажать на кнопку "Проверить источник данных...":
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db7.PNG)
-
-##### 1.8. Если все ок, то получаем такой результат:
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db8.PNG)
-
-
-### 2.  Теперь нужно выполнить некоторые настройки в Медиалоге
-
-##### 2.1. В глоссарии для объекта "Амбулаторные назначения", вкладка "Список"
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_simple.PNG)
-
-##### 2.2. В глоссарии для объекта "Амбулаторные назначения", вкладка "Типовые"
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_typical.PNG)
-
-##### 2.3. В окне для поиска медикаментов
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_drug.PNG)
-
-##### 2.4. В окне для поиска шаблона (схемы) для назначения
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_drug_scheme.PNG)
-
-##### 2.5. В окне для поиска типовых назначений
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_typical.PNG)
-
-##### 2.6. В проекте "base_tests" способ введения в назначение добавляется двойным кликом из глоссария, поэтому нужно учесть, что глоссарий со способами введения не должен быть пустым
-![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_intake_methods.PNG)
-
-##### 2.7. Системные параметры PR_TEMPLATES_SIMPLE_DEFAULT и PR_TEMPLATES_MULTIPLE_DEFAULT должны быть заполнены. Схемы в системных параметрах могут быть любыми.
-
-### 3. Нужно настроить переменные в файле Unit_var.sj
+> ### 1. Нужно создать подключение к БД
+>
+>> ##### 1.1. Windows -> Панель управления -> Администрирование -> Источники данных (ODBC):
+>> ![Источники данных (ODBC)](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db_1.PNG)
+>> 
+>> ##### 1.2. В окне "Создание нового источника данных" выбрать "ODBC Driver 17 for SQL Server":
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db2.PNG)
+>> 
+>> ##### 1.3. В окне "Создание источника данных для SQL Server" заполнить имя для источника данных и выбрать нужный сервер:
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db3.PNG)
+>> 
+>> ##### 1.4. Далее выбрать пункт "проверка подлинности учетной записи SQL Server" и ввести имя пользователя и пароль:
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db4.PNG)
+>> 
+>> ##### 1.5. Проставить галочку "Использовать по умолчанию базу данных" и выбрать базу данных, к которой нужно подключаться:
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db5.PNG)
+>> 
+>> ##### 1.6. На следующем этапе ничего не меняем, нажимаем на кнопку "Готово":
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db6.PNG)
+>> 
+>> ##### 1.7. В окне "Установка ODBC для Microsoft SQL Server" нажать на кнопку "Проверить источник данных...":
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db7.PNG)
+>> 
+>> ##### 1.8. Если все ок, то получаем такой результат:
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/connection_db8.PNG)
+>
+> ### 2.  Теперь нужно выполнить некоторые настройки в Медиалоге
+>
+>> #### 2.1. Настроить модели поиска в соответствии с тем, как указано на скриншотах
+>> 
+>>> ##### 2.1.1. В глоссарии для объекта "Амбулаторные назначения", вкладка "Список"
+>>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_simple.PNG)
+>>> 
+>>> ##### 2.1.2. В глоссарии для объекта "Амбулаторные назначения", вкладка "Типовые"
+>>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_typical.PNG)
+>>> 
+>>> ##### 2.1.3. В окне для поиска медикаментов
+>>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_drug.PNG)
+>>> 
+>>> ##### 2.1.4. В окне для поиска шаблона (схемы) для назначения
+>>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_drug_scheme.PNG)
+>>> 
+>>> ##### 2.1.5. В окне для поиска типовых назначений
+>>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_toolbar_typical.PNG)
+>> 
+>> #### 2.2. В проекте "base_tests" способ введения в назначение добавляется двойным кликом из глоссария, поэтому нужно учесть, что глоссарий со способами введения не должен быть пустым
+>> ![Имя изображения](https://github.com/NastyaGresova/HelloWorld/blob/main/base_tests_gloss_intake_methods.PNG)
+>> 
+>> #### 2.3. Системные параметры PR_TEMPLATES_SIMPLE_DEFAULT и PR_TEMPLATES_MULTIPLE_DEFAULT должны быть заполнены. Схемы в системных параметрах могут быть любыми.
+>
+> ### 3. Нужно настроить переменные в файле Unit_var.sj
 
 Сейчас в файле Unit_var.sj настроены переменные для следующих тестовых баз:
 * \\SQL-SERVER\CLIENTS_BASE\TESTIROVANYE\ALL\TESTERS_800_DEV_BTK
